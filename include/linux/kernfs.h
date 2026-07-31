@@ -117,6 +117,7 @@ union kernfs_node_id {
 struct kernfs_node {
 	atomic_t		count;
 	atomic_t		active;
+	ino_t		ino;
 #ifdef CONFIG_DEBUG_LOCK_ALLOC
 	struct lockdep_map	dep_map;
 #endif
